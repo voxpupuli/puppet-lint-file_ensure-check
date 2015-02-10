@@ -5,18 +5,17 @@ PuppetLint.new_check(:file_ensure) do
         attr = resource[:tokens].select { |t| t.type == :NAME && \
                                               t.value == 'ensure' && \
                                               t.next_code_token.type == :FARROW }
-        unless attr.empty?
-          val_token = attr[0].next_code_token.next_code_token
-          if val_token.value == 'present'
-              notify :warning, {
-                :message  => 'ensure set to present on file resource',
-                :line     => val_token.line,
-                :column   => val_token.column,
-                :token    => val_token,
-                :resource => resource,
-              }
-          end
-        end
+        next if attr.empty?
+        val_token = attr[0].next_code_token.next_code_token
+        next unless val_token.value == 'present'
+        next unless [:NAME, :STRING, :SSTRING].include? val_token.type
+        notify :warning, {
+          :message  => 'ensure set to present on file resource',
+          :line     => val_token.line,
+          :column   => val_token.column,
+          :token    => val_token,
+          :resource => resource,
+        }
       end
     end
   end

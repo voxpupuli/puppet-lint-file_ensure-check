@@ -15,6 +15,10 @@ describe 'file_ensure' do
           ensure => 'target',
           target => '/etc/mtab',
         }
+
+        file { '/tmp/foo':
+          ensure => $present,
+        }
         EOS
       }
 
@@ -33,6 +37,10 @@ describe 'file_ensure' do
         file { '/etc/fstab':
           ensure => 'present',
           target => '/etc/mtab',
+        }
+
+        file { '/tmp/foo':
+          ensure => $present,
         }
         EOS
       }
@@ -68,6 +76,10 @@ describe 'file_ensure' do
           ensure => 'target',
           target => '/etc/mtab',
         }
+
+        file { '/tmp/foo':
+          ensure => $present,
+        }
         EOS
       }
 
@@ -91,6 +103,10 @@ describe 'file_ensure' do
           ensure => 'present',
           target => '/etc/mtab',
         }
+
+        file { '/tmp/foo':
+          ensure => $present,
+        }
         EOS
       }
 
@@ -113,6 +129,10 @@ describe 'file_ensure' do
         file { '/etc/fstab':
           ensure => 'link',
           target => '/etc/mtab',
+        }
+
+        file { '/tmp/foo':
+          ensure => $present,
         }
           EOS
         )
