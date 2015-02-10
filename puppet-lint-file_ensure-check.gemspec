@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-file_ensure-check'
-  spec.version     = '0.1.0'
+  spec.version     = '0.2.0'
   spec.homepage    = 'https://github.com/camptocamp/puppet-lint-file_ensure-check'
   spec.license     = 'Apache-2.0'
   spec.author      = 'Camptocamp'
