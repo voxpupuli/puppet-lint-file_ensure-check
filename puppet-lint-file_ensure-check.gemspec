@@ -12,9 +12,9 @@ Gem::Specification.new do |spec|
     'spec/**/*',
   ]
   spec.test_files  = Dir['spec/**/*']
-  spec.summary     = 'A puppet-lint plugin to check the ensure parameter on file resources.'
+  spec.summary     = 'A puppet-lint plugin to check the ensure attribute on file resources.'
   spec.description = <<-EOF
-    A puppet-lint plugin to check the ensure parameter on file resources.
+    A puppet-lint plugin to check the ensure attribute on file resources.
   EOF
 
   spec.add_dependency             'puppet-lint', '~> 1.0'
