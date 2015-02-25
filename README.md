@@ -9,6 +9,19 @@ puppet-lint-file_ensure-check
 
 A puppet-lint plugin to check the ensure attribute on file resources.
 
+## Installing
+
+### From the command line
+
+```shell
+$ gem install puppet-lint-file_ensure-check
+```
+
+### In a Gemfile
+
+```ruby
+gem 'puppet-lint-file_ensure-check', :require => false
+```
 
 ## Checks
 
