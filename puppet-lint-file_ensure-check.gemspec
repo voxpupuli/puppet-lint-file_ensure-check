@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/puppet-community/puppet-lint-file_ensure-check'
   spec.license     = 'Apache-2.0'
   spec.author      = 'Puppet Community'
-  spec.email       = 'raphael.pinson@puppet-community.com'
+  spec.email       = 'raphael.pinson@camptocamp.com'
   spec.files       = Dir[
     'README.md',
     'LICENSE',
