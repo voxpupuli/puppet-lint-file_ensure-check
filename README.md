@@ -34,7 +34,7 @@ The `present` value for the `ensure` attribute is ambiguous. You should use `fil
 
 ```puppet
 file { '/etc/sudoers':
-  ensure => present,
+  ensure => 'present',
 }
 ```
 
@@ -42,7 +42,7 @@ file { '/etc/sudoers':
 
 ```puppet
 file { '/etc/sudoers':
-  ensure => file,
+  ensure => 'file',
 }
 ```
 
