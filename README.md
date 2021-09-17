@@ -7,6 +7,7 @@ puppet-lint-file_ensure-check
 [![RubyGem Version](https://img.shields.io/gem/v/puppet-lint-file_ensure-check.svg)](https://rubygems.org/gems/puppet-lint-file_ensure-check)
 [![RubyGem Downloads](https://img.shields.io/gem/dt/puppet-lint-file_ensure-check.svg)](https://rubygems.org/gems/puppet-lint-file_ensure-check)
 [![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
+[![codecov](https://codecov.io/gh/voxpupuli/puppet-lint-file_ensure-check/branch/master/graph/badge.svg)](https://codecov.io/gh/voxpupuli/puppet-lint-file_ensure-check)
 
 A puppet-lint plugin to check the ensure attribute on file resources.
 
