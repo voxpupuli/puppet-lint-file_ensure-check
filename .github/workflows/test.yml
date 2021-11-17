@@ -22,6 +22,7 @@ jobs:
             coverage: "yes"
     env:
       COVERAGE: ${{ matrix.coverage }}
+    name: Ruby ${{ matrix.ruby }}
     steps:
       - uses: actions/checkout@v2
       - name: Install Ruby ${{ matrix.ruby }}
