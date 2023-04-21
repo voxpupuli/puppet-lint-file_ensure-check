@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe 'file_ensure' do
-  let (:msg) { 'ensure set to present on file resource' }
+  let(:msg) { 'ensure set to present on file resource' }
 
   context 'with fix disabled' do
     context 'correct file resource declarations' do
-      let (:code) {
+      let(:code) do
         <<-EOS
         file { '/etc/sudoers':
           ensure => file,
@@ -20,15 +20,15 @@ describe 'file_ensure' do
           ensure => $present,
         }
         EOS
-      }
+      end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
     end
 
     context 'wrong file resource declarations' do
-      let (:code) {
+      let(:code) do
         <<-EOS
         file { '/etc/sudoers':
           ensure => present,
@@ -43,13 +43,13 @@ describe 'file_ensure' do
           ensure => $present,
         }
         EOS
-      }
+      end
 
-      it 'should detect problems' do
+      it 'detects problems' do
         expect(problems).to have(2).problems
       end
 
-      it 'should create a warning' do
+      it 'creates a warning' do
         expect(problems).to contain_warning(msg).on_line(2).in_column(21)
         expect(problems).to contain_warning(msg).on_line(6).in_column(21)
       end
@@ -66,7 +66,7 @@ describe 'file_ensure' do
     end
 
     context 'correct file resource declarations' do
-      let (:code) {
+      let(:code) do
         <<-EOS
         file { '/etc/sudoers':
           ensure => file,
@@ -81,19 +81,19 @@ describe 'file_ensure' do
           ensure => $present,
         }
         EOS
-      }
+      end
 
-      it 'should not detect any problems' do
+      it 'does not detect any problems' do
         expect(problems).to have(0).problems
       end
 
-      it 'should not modify the manifest' do
+      it 'does not modify the manifest' do
         expect(manifest).to eq(code)
       end
     end
 
     context 'wrong file resource declarations' do
-      let (:code) {
+      let(:code) do
         <<-EOS
         file { '/etc/sudoers':
           ensure => present,
@@ -108,20 +108,20 @@ describe 'file_ensure' do
           ensure => $present,
         }
         EOS
-      }
+      end
 
-      it 'should detect two problems' do
+      it 'detects two problems' do
         expect(problems).to have(2).problems
       end
 
-      it 'should create a warning' do
+      it 'creates a warning' do
         expect(problems).to contain_fixed(msg).on_line(2).in_column(21)
         expect(problems).to contain_fixed(msg).on_line(6).in_column(21)
       end
 
-      it 'should fix the ensure parameter' do
+      it 'fixes the ensure parameter' do
         expect(manifest).to eq(
-          <<-EOS
+          <<-EOS,
         file { '/etc/sudoers':
           ensure => file,
         }
