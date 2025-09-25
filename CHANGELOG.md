@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0](https://github.com/voxpupuli/puppet-lint-file_ensure-check/tree/3.0.0) (2025-09-25)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-lint-file_ensure-check/compare/2.0.0...3.0.0)
+
+**Breaking changes:**
+
+- Require Ruby 3.2+ & puppet-lint 5.1+ [\#23](https://github.com/voxpupuli/puppet-lint-file_ensure-check/pull/23) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [2.0.0](https://github.com/voxpupuli/puppet-lint-file_ensure-check/tree/2.0.0) (2023-04-21)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-lint-file_ensure-check/compare/1.1.0...2.0.0)
