@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
     A puppet-lint plugin to check the ensure attribute on file resources.
   EOF
 
-  spec.required_ruby_version = '>= 2.7.0'
+  spec.required_ruby_version = '>= 3.2'
 
-  spec.add_dependency 'puppet-lint', '>= 3', '< 5'
+  spec.add_dependency 'puppet-lint', '~> 5.1'
   spec.add_development_dependency 'mime-types', '~> 3.4', '>= 3.4.1'
 end
